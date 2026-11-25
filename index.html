@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="tracker-container">
+        <!-- App Header -->
+        <header class="app-header">
+            <h2><i class="fa-solid fa-wallet"></i> Expense Tracker</h2>
+        </header>
+
+        <!-- Balance Card -->
+        <div class="balance-card">
+            <h4>Your Balance</h4>
+            <h1 id="balance">$0.00</h1>
+        </div>
+
+        <!-- Income & Expense Summary Box -->
+        <div class="inc-exp-container">
+            <div class="summary-box income-box">
+                <h4>Income</h4>
+                <p id="money-plus" class="money plus">+$0.00</p>
+            </div>
+            <div class="divider"></div>
+            <div class="summary-box expense-box">
+                <h4>Expense</h4>
+                <p id="money-minus" class="money minus">-$0.00</p>
+            </div>
+        </div>
+
+        <!-- History / Transactions List -->
+        <div class="section-container">
+            <h3>History</h3>
+            <ul id="list" class="list">
+                <!-- Transactions will be dynamically added here -->
+            </ul>
+        </div>
+
+        <!-- Add Transaction Form -->
+        <div class="section-container">
+            <h3>Add New Transaction</h3>
+            <form id="form">
+                <div class="form-control">
+                    <label for="text">Description</label>
+                    <input type="text" id="text" placeholder="e.g., Salary, Groceries, Rent..." required />
+                </div>
+
+                <div class="form-control">
+                    <label for="amount">
+                        Amount <br />
+                        <small>(positive = income, negative = expense)</small>
+                    </label>
+                    <input type="number" id="amount" step="any" placeholder="e.g., 500 or -50" required />
+                </div>
+
+                <button type="submit" class="btn" id="add-btn">
+                    <i class="fa-solid fa-plus"></i> Add Transaction
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
